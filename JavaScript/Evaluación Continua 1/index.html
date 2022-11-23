@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Prueba tu suerte en este juego donde tendrás que lanzar tres dados y conseguir la mayor cantidad de puntos para ganar.">
+        <meta name="keywords" content="juedos de dados, dado virtual, dados al azar, juegos de suerte">
+        <meta name="author" content="Dado Virtual">
+        <meta name="copyright" content="Dado Virtual">
+        <meta name="robots" content="index,follow">
+        <meta http-equiv="expires" content="43200">
+
+        <title>Dado Virtual</title>
+        <link rel="icon" href="./img/icon-page.png">
+
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="bodyContainer">
+
+    <!-- ------------------------------------- HEADER ---------------------------------------------- -->
+        <header class="headerContainer">
+            <div class="headerContainer__decoration  headerContainer__decoration--topLeft"></div>
+            <div class="headerContainer__decoration  headerContainer__decoration--centerLeft"></div>
+            <div class="headerContainer__decoration  headerContainer__decoration--bottomLeft"></div>
+
+            <img class="headerContainer__image" src="./img/dado-icon.png" alt="Imagen de un dado">
+
+            <h1 class="headerContainer__title">Dado Virtual</h1>
+
+            <img class="headerContainer__image" src="./img/dado-icon.png" alt="Imagen de un dado">
+
+            <div class="headerContainer__decoration  headerContainer__decoration--topRight"></div>
+            <div class="headerContainer__decoration  headerContainer__decoration--centerRight"></div>
+            <div class="headerContainer__decoration  headerContainer__decoration--bottomRight"></div>
+        </header>
+
+    <!-- ------------------------------------- MAIN ---------------------------------------------- -->
+        <main class="mainContainer">
+            <section class="mainContainer__rules">
+                <p class="mainContainer__rules__title">Reglas del juego:</p>
+                <p class="mainContainer__rules__content">Lanze cada uno de los dados haciendo click en el botón "Jugar Dado". Los puntos que obtenga de cada lanzamiento se irán almacenando en la tabla inferior. Finalmente haga click en el botón "Verificar Puntuación" para obtener la suma de todos los puntos. Para ganar necesita conseguir entre 12 a 18 puntos en total.</p>
+            </section>
+
+        <!-- --------------------------------------------------------------------------------------- -->
+
+            <section class="mainContainer__sectionDados">
+                <div class="dadoContainer">
+
+                    <div class="dadoContainer__eje  dadoContainer__eje__animation--rotate"  id="Dado1">
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--1">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--2">
+                            <div class="lados__row">
+                                <div class="circle-hidden"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-hidden"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--3">
+                            <div class="lados__row">
+                                <div class="circle-hidden"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-hidden"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--4">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--5">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--6">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="dadoContainer__button"  id="buttonDado1">Jugar Dado 1</button>
+                    <button class="dadoContainer__button   dadoContainer__button--hidden   points-delay"  id="buttonDado1--active"></button>
+                </div>
+
+
+                <div class="dadoContainer">
+
+                    <div class="dadoContainer__eje  dadoContainer__eje__animation--rotate"  id="Dado2">
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--1">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--2">
+                            <div class="lados__row">
+                                <div class="circle-hidden"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-hidden"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--3">
+                            <div class="lados__row">
+                                <div class="circle-hidden"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-hidden"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--4">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--5">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--6">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="dadoContainer__button"  id="buttonDado2">Jugar Dado 2</button>
+                    <button class="dadoContainer__button   dadoContainer__button--hidden   points-delay"  id="buttonDado2--active"></button>
+                </div>
+
+
+                <div class="dadoContainer">
+
+                    <div class="dadoContainer__eje  dadoContainer__eje__animation--rotate"  id="Dado3">
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--1">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--2">
+                            <div class="lados__row">
+                                <div class="circle-hidden"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-hidden"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--3">
+                            <div class="lados__row">
+                                <div class="circle-hidden"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-hidden"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--4">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--5">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+
+                        <div class="dadoContainer__eje__lados  dadoContainer__eje__lado--6">
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                            <div class="lados__row">
+                                <div class="circle-visible"></div>
+                                <div class="circle-visible"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="dadoContainer__button"  id="buttonDado3">Jugar Dado 3</button>
+                    <button class="dadoContainer__button   dadoContainer__button--hidden   points-delay"  id="buttonDado3--active"></button>
+                </div>
+            </section>
+
+        <!-- --------------------------------------------------------------------------------------- -->
+
+            <section class="mainContainer__sectionTable">
+                <div class="tableContainer">
+                    <div class="tableContainer__celda  tableContainer__celda--1">
+                        <p class="tableContainer__celda__item"></p>
+                    </div>
+                    <div class="tableContainer__celda  tableContainer__celda--2">
+                        <p class="tableContainer__celda__item">Dado 1</p>
+                    </div>
+                    <div class="tableContainer__celda  tableContainer__celda--3">
+                        <p class="tableContainer__celda__item">Dado 2</p>
+                    </div>
+                    <div class="tableContainer__celda  tableContainer__celda--4">
+                        <p class="tableContainer__celda__item">Dado 3</p>
+                    </div>
+                    <div class="tableContainer__celda  tableContainer__celda--5">
+                        <p class="tableContainer__celda__item">Puntos</p>
+                    </div>
+                    <div class="tableContainer__celda  tableContainer__celda--6">
+                        <p class="tableContainer__celda__item"  id="dadoValue1"></p>
+                    </div>
+                    <div class="tableContainer__celda  tableContainer__celda--7">
+                        <p class="tableContainer__celda__item"  id="dadoValue2"></p>
+                    </div>
+                    <div class="tableContainer__celda  tableContainer__celda--8">
+                        <p class="tableContainer__celda__item"  id="dadoValue3"></p>
+                    </div>
+                </div>
+            </section>
+
+        <!-- --------------------------------------------------------------------------------------- -->
+
+            <section class="mainContainer__sectionPoints">
+                <section class="buttonContainer">
+                    <button class="buttonContainer__verificar"  id="buttonVerification">Verificar puntuación</button>
+                </section>
+
+                <section class="resultadoContainer  sectionPoints--hidden">
+                    <div class="resultadoContainer__animation">
+                        <div class="circle-hiddenLoad"></div>
+                        <div class="circle-gradient1"></div>
+                        <div class="circle-gradient2"></div>
+                    </div>
+
+                    <div class="resultadoContainer__puntuación">
+                        <h2 class="resultadoContainer__puntuación__title"  id="puntuaciónTitle"></h2>
+                        <p class="resultadoContainer__puntuación__points"  id="puntuaciónPoints"></p>
+                    </div>
+
+                    <button class="resultadoContainer__puntuación__reset">Volver a jugar</button>
+                </section>
+            </section>
+        </main>
+
+    <!-- ------------------------------------- FOOTER ---------------------------------------------- -->
+        <footer class="footerContainer">
+            <p class="footerContainer__content">Evaluación Continua 1 - Paulo Quispe Horna</p>
+            <p class="footerContainer__content">IDAT - Diseño y Desarrollo Web - 2022</p>
+        </footer>
+        
+    </body>
+</html>

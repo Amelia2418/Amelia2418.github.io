@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Recolección de datos de usuarios aleatorios desde una API usando Axios, ademas de algunos efectos usando JQuery.">
+        <meta name="robots" content="index,follow">
+        <meta http-equiv="expires" content="43200">
+
+        <title>Axios y JQuery</title>
+
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
+    </head>
+
+    <body class="bodyContainer">
+
+    <!------------------------------------- HEADER ------------------------------------------------>
+        <header class="headerContainer">
+            <h1 class="headerContainer__title">Axios y JQuery</h1>
+        </header>
+
+    <!------------------------------------- MAIN ------------------------------------------------>
+        <main class="mainContainer">
+
+            <section class="mainContainer__options">
+                <button id="btnNewUsers">Mostrar Nuevos Usuarios</button>
+                
+                <ol class="tableOptions">
+                    <li class="tableOptions__celda">
+                        <p class="celdaTitle">Nombre y Apellido:</p>
+                        <button class="btnMostrar" id="btnMostrarName">Mostrar</button>
+                        <button class="btnOcultar" id="btnOcultarName">Ocultar</button>
+                    </li>
+
+                    <li class="tableOptions__celda">
+                        <p class="celdaTitle">Nombre de usuario:</p>
+                        <button class="btnMostrar" id="btnMostrarUser">Mostrar</button>
+                        <button class="btnOcultar" id="btnOcultarUser">Ocultar</button>
+                    </li>
+                    
+                    <li class="tableOptions__celda">
+                        <p class="celdaTitle">Correo Electrónico:</p>
+                        <button class="btnMostrar" id="btnMostrarEmail">Mostrar</button>
+                        <button class="btnOcultar" id="btnOcultarEmail">Ocultar</button>
+                    </li>
+
+                    <li class="tableOptions__celda">
+                        <p class="celdaTitle">Contraseña:</p>
+                        <button class="btnMostrar" id="btnMostrarPassword">Mostrar</button>
+                        <button class="btnOcultar" id="btnOcultarPassword">Ocultar</button>
+                    </li>
+
+                    <li class="tableOptions__celda">
+                        <p class="celdaTitle">Localización del usuario:</p>
+                        <button class="btnMostrar" id="btnMostrarLocation">Mostrar</button>
+                        <button class="btnOcultar" id="btnOcultarLocation">Ocultar</button>
+                    </li>
+
+                    <li class="tableOptions__celda">
+                        <p class="celdaTitle">Número de Celular:</p>
+                        <button class="btnMostrar" id="btnMostrarCell">Mostrar</button>
+                        <button class="btnOcultar" id="btnOcultarCell">Ocultar</button>
+                    </li>
+
+                    <li class="tableOptions__celda">
+                        <p class="celdaTitle">Género:</p>
+                        <button class="btnMostrar" id="btnMostrarGender">Mostrar</button>
+                        <button class="btnOcultar" id="btnOcultarGender">Ocultar</button>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="mainContainer__lista">
+                <h2>Lista de Usuarios</h2>
+
+                <div class="listaContainer" id="itemsContainer">
+                    
+                </div>
+            </section>
+
+        </main>
+
+    <!------------------------------------- FOOTER ------------------------------------------------>
+        <footer class="footerContainer">
+            <p class="footerContainer__firma">Evaluación Final - Paulo Quispe Horna</p>
+            <p class="footerContainer__firma">IDAT - Diseño y Desarrollo Web - 2022</p>
+        </footer>
+
+    </body>
+</html>

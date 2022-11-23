@@ -1,0 +1,299 @@
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* -------------------------- HEADER ---------------------------- */
+
+header {
+    width: 100%;
+    min-height: 102px;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+/* ---------- PRIMERA SECCIÓN DEL HEADER ------- */
+.decoracion {
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+}
+
+.header-section1 {
+    background-color: #171615;
+    width: 100%;
+    height: 72px;
+    position: relative;
+}
+
+.header-section1 img {
+    width: 250px;
+    height: 42px;
+    position: absolute;
+    left: calc(50% - 125px);
+    top: calc(50% - 21px);
+}
+
+/* --------- SEGUNDA SECCIÓN DEL HEADER ---------- */
+.header-section2 {
+    background-color: #313131;
+    width: 100%;
+    height: 30px;
+    position: relative;
+}
+
+.header-section2 nav {
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    left: calc(50% - 45%);
+}
+
+.header-section2 nav ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header-section2 nav ul li {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#header-enlace1 a, 
+#header-enlace2 a, 
+#header-enlace3 a, 
+#header-enlace4 a {
+    text-decoration: none;
+    color: white;
+}
+
+#header-enlace1 a:hover, 
+#header-enlace2 a:hover, 
+#header-enlace3 a:hover, 
+#header-enlace4 a:hover {
+    color: #a0e080;
+}
+
+
+/* -------------------------- MAIN ---------------------------- */
+
+main {
+    box-sizing: border-box;
+    width: 100%; 
+    min-height: 800px;
+    background-image: url('../imágenes/imagen-fondo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 40px;
+    z-index: 1;
+    text-align: center;
+}
+
+.main-container {
+    box-sizing: border-box;
+    background-color: white;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 100%;
+    opacity: 90%;
+    display: inline-block;
+    padding: 15px 30px 30px;
+    text-align: start;
+}
+
+/* ------- PRIMERA SECCIÓN DEL MAIN -------- */
+.main-introduccion p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    margin: 10px 0 10px 0;
+}
+
+/* ------- SEGUNDA SECCIÓN DEL MAIN -------- */
+.main-indice {
+    box-sizing: border-box;
+    background-color: #9ac6ff;
+    width: 285px;
+    padding: 20px 20px;
+    border-radius: 25px;
+    margin: 30px 0 40px 0;
+}
+
+.main-indice h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    margin: 0px;
+    font-weight: bolder;
+}
+
+.main-indice ol {
+    margin: 0px;
+    padding: 0 0 0 25px;
+}
+
+.main-indice ol > li {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.main-indice li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    margin: 0px;
+    font-weight: normal;
+}
+
+/* ------- TERERA SECCIÓN DEL MAIN -------- */
+.main-contenido h2 {
+    color: #2b630f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.0rem;
+    margin: 35px 0 0 0;
+}
+
+.main-contenido h3 {
+    color: #338b07;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    margin: 12px 0 0 40px;
+}
+
+.main-contenido p {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    margin: 6px 0 0 0;
+}
+
+.main-contenido h3 + p {
+    margin-left: 40px;
+}
+
+
+/* -------------------------- FOOTER ---------------------------- */
+
+footer {
+    width: 100%;
+    height: 340px;
+    z-index: 3;
+}
+
+/* ------- PRIMERA SECCIÓN DEL FOOTER -------- */
+.footer-section1 {
+    background-color: #171615;
+    width: 100%;
+    height: 110px;
+}
+
+.footer-section1 h3 {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 18px 0px 0px 0px;
+    margin: 0px;
+}
+
+.footer-redesSociales {
+    width: 100%;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.footer-redesSociales a {
+    background-color: #313131;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border-radius: 50%;
+    margin-right: 28px;
+}
+
+.footer-redesSociales a:nth-child(1):hover {
+    background-color: #fd0416;
+}
+
+.footer-redesSociales a:nth-child(2):hover {
+    background-color: #e3006b;
+}
+
+.footer-redesSociales a:nth-child(3):hover {
+    background-color: #1676f1;
+}
+
+.footer-redesSociales a:nth-child(4):hover {
+    background-color: #00a2ff;
+}
+
+.footer-redesSociales a:nth-child(5):hover {
+    background-color: #ff4d00;
+}
+
+.footer-redesSociales a:nth-child(5) {
+    margin-right: 0px;
+}
+
+.footer-redesSociales a img {
+    position: absolute;
+}
+
+
+/* ------- SEGUNDA SECCIÓN DEL FOOTER -------- */
+.footer-section2 {
+    background-color: #111111;
+    width: 100%;
+    height: 170px;
+    position: relative;
+
+}
+
+.footer-image {
+    display: inline-block;
+    height: 100px;
+    position: absolute;
+    top: calc(50% - 50px);
+}
+
+/* ------- TERCERA SECCIÓN DEL FOOTER -------- */
+.footer-section3 {
+    background-color: #313131;
+    width: 100%;
+    min-height: 85px;
+}
+
+.footer-section3 p {
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 0 0 0;
+    margin: 0px;
+}
+
+.footer-section3 a {
+    color: #a0e080;
+    display: inline-block;
+    width:49.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+}

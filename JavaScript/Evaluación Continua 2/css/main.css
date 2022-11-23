@@ -1,0 +1,369 @@
+
+/* -------------------------------------------- GENERAL -------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/* -------------------------------------------- BODY -------------------------------------------------- */
+
+.bodyContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(100px, auto) minmax(1096px, auto) minmax(106px, auto);
+    grid-template-areas: 
+        "Header"
+        "Main"
+        "Footer";
+}
+
+body::-webkit-scrollbar {
+    background-color: #efefef;
+    width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #4d3e80;
+    border-radius: 20px;
+}
+
+
+
+
+/* -------------------------------------------- HEADER -------------------------------------------------- */
+
+.headerContainer {
+    background: linear-gradient(180deg, #251c47 0%, #4d3e80 100%);
+    grid-area: Header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 1px #333;
+    z-index: 2;
+}
+
+.headerContainer__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+    height: 100%;
+    padding: 20px;
+}
+
+.headerContainer__title h1 {
+    color: #fff;
+    font-family: cursive;
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+
+
+
+/* -------------------------------------------- MAIN -------------------------------------------------- */
+
+.mainContainer {
+    background-color: #e4dbff85;
+    grid-area: Main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 0;
+    z-index: 1;
+}
+
+
+
+.mainContainer__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 30px 0;
+}
+
+.mainContainer__button button {
+    background-color: #2251d7;
+    color: #fff;
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 15px 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 1px #1d1d1d;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.mainContainer__button button:active {
+    background-color: #000;
+}
+
+
+
+.mainContainer__list {
+    display: grid;
+    width: 100%;
+    max-width: 2000px;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto);
+    grid-template-areas: 
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5"
+            "item6"
+            "item7"
+            "item8"
+            "item9"
+            "item10";
+    justify-items: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.list__items {
+    background-color: #fff;
+    width: 100%;
+    max-width: 300px;
+    min-height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 1px #1d1d1d;
+    padding: 0 10px;
+    opacity: 0;
+    visibility: 0;
+    /* cursor: pointer; */
+}
+
+.list__items--item0 {
+    grid-area: item1;
+    animation: item 0.5s linear 0.3s forwards;
+}
+.list__items--item1 {
+    grid-area: item2;
+    animation: item 0.5s linear 0.5s forwards;
+}
+.list__items--item2 {
+    grid-area: item3;
+    animation: item 0.5s linear 0.7s forwards;
+}
+.list__items--item3 {
+    grid-area: item4;
+    animation: item 0.5s linear 0.9s forwards;
+}
+.list__items--item4 {
+    grid-area: item5;
+    animation: item 0.5s linear 1.1s forwards;
+}
+.list__items--item5 {
+    grid-area: item6;
+    animation: item 0.5s linear 1.3s forwards;
+}
+.list__items--item6 {
+    grid-area: item7;
+    animation: item 0.5s linear 1.5s forwards;
+}
+.list__items--item7 {
+    grid-area: item8;
+    animation: item 0.5s linear 1.7s forwards;
+}
+.list__items--item8 {
+    grid-area: item9;
+    animation: item 0.5s linear 1.9s forwards;
+}
+.list__items--item9 {
+    grid-area: item10;
+    animation: item 0.5s linear 2.1s forwards;
+}
+
+@keyframes item {
+    0% {
+        opacity: 0;
+        visibility: 0;
+    }
+    100% {
+        opacity: 1;
+        visibility: 1;
+    }
+}
+
+.list__items--borderBlue {
+    border: 5px solid #5682ff;
+}
+
+.list__items--borderPink {
+    border: 5px solid #ff70cc;
+}
+
+
+.list__items__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.content__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 140px;
+}
+
+.content__img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 1px #1d1d1d;
+}
+
+.content__name {
+    text-align: center;
+    font-size: 2.0rem;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.content__email {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 20px 0;
+    border-top: 1px dashed #484848;
+    overflow-x: auto;
+}
+
+.content__email::-webkit-scrollbar {
+    background-color: #efefef;
+    height: 6px;
+}
+
+.content__email::-webkit-scrollbar-thumb {
+    background-color: #4d3e80;
+    border-radius: 20px;
+}
+
+.content__location {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 20px 0;
+    border-top: 1px dashed #484848;
+}
+
+.content__cell {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 20px 0;
+    border-top: 1px dashed #484848;
+}
+
+.contentItems--backgroundPink {
+    background-color: #ffd0ee;
+}
+
+.contentItems--backgroundBlue {
+    background-color: #b4b4ff;
+}
+
+
+
+
+/* -------------------------------------------- FOOTER -------------------------------------------------- */
+
+.footerContainer {
+    background: linear-gradient(180deg, #4d3e80 0%, #251c47 100%);
+    grid-area: Footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 1px #333;
+    z-index: 3;
+}
+
+.footerContainer__firma {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    height: 100%;
+    padding: 18px 20px;
+}
+
+.footerContainer__firma p {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 8px 0;
+}
+
+
+
+
+/* ------------------------------------------- MEDIA QUERIES ------------------------------------------------ */
+
+/* ----------- Media Query => min-width: 800px ------------ */
+@media screen and (min-width: 800px) {
+    .mainContainer__list {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto);
+        grid-template-areas: 
+                "item1 item2"
+                "item3 item4"
+                "item5 item6"
+                "item7 item8"
+                "item9 item10";
+    }
+}
+
+
+/* ----------- Media Query => min-width: 1280px ------------ */
+@media screen and (min-width: 1280px) {
+    .mainContainer__list {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: minmax(500px, auto) minmax(500px, auto) minmax(500px, auto) minmax(500px, auto);
+        grid-template-areas: 
+                "item1 item2 item3"
+                "item4 item5 item6"
+                "item7 item8 item9"
+                "item10 item10 item10";
+    }
+}
+
+
+/* ----------- Media Query => min-width: 2000px ------------ */
+@media screen and (min-width: 2000px) {
+    .mainContainer__list {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: minmax(500px, auto) minmax(500px, auto);
+        grid-template-areas: 
+                "item1 item2 item3 item4 item5"
+                "item6 item7 item8 item9 item10";
+    }
+}

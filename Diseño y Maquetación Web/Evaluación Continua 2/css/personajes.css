@@ -1,0 +1,418 @@
+
+@import url('./home.css');
+
+
+
+/* -------------------------------------  Animación de Carga --------------------------------------------------- */
+
+.loading {
+    animation: load 1s linear 2s forwards;
+}
+
+
+/* -----------------  Animación de Carga (Circulos) ----------------- */
+
+.loading__circle:nth-child(1) {
+    animation: loading 1.5s linear forwards;
+}
+
+.loading__circle:nth-child(2) {
+    animation: loading 1.5s linear 0.2s forwards;
+}
+
+.loading__circle:nth-child(3) {
+    margin-right: 0;
+    animation: loading 1.5s linear 0.4s forwards;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+
+
+/* --------------------------------------- Contenedor General ---------------------------------------------- */
+
+.containerGeneral {
+    animation: visibility 1s linear 2s forwards;
+}
+
+
+
+/* ------------------------------------------ Header -------------------------------------------------- */
+
+
+/* ------------------------ Header Nav ------------------------ */
+
+.navegation__item:nth-child(1) {
+    background-color: #e006c3;
+    transition: none;
+}
+
+.navegation__item:nth-child(1):hover {
+    scale: 1;
+    transition: none;
+}
+
+.navegation__item p {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    z-index: 1;
+    transition: color 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    cursor: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+.navegation__item:nth-child(1) span {
+    background-image: url('../img/image-mobile/personajes-logo.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 24px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+
+
+/* --------------------------------------- Contenedor General ---------------------------------------------- */
+
+.containerGeneral {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(250px, auto) minmax(100px, auto) minmax(200px, auto);
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+
+
+
+/* --------------------------------------------- Main ------------------------------------------------------ */
+
+.main-personajes {
+    grid-area: main;
+    background-color: #e6caff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main-personajes__Sunny,
+.main-personajes__Hitch,
+.main-personajes__Izzy,
+.main-personajes__Zipp,
+.main-personajes__Pipp {
+    display: grid;
+    max-width: 400px;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(10px, auto) minmax(10px, auto) minmax(10px, auto) minmax(10px, auto);
+    grid-template-areas: 
+        "name"
+        "image"
+        "description"
+        "details";
+    margin-top: 180px;
+    margin-bottom: 40px;
+}
+
+.main-personajes__Pipp {
+    margin-bottom: 180px;
+}
+
+
+/* --------------------- Main (nombre) --------------------- */
+
+.Sunny__name,
+.Hitch__name,
+.Izzy__name,
+.Zipp__name,
+.Pipp__name {
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.Sunny__name h2,
+.Hitch__name h2,
+.Izzy__name h2,
+.Zipp__name h2,
+.Pipp__name h2 {
+    background-color: #2251d7;
+    color: white;
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 2.0rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 1px #1a1a1a;
+}
+
+
+/* --------------------- Main (imagen) --------------------- */
+
+.Sunny__image,
+.Hitch__image,
+.Izzy__image,
+.Zipp__image,
+.Pipp__image {
+    grid-area: image;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.Sunny__image img,
+.Hitch__image img,
+.Izzy__image img,
+.Zipp__image img,
+.Pipp__image img {
+    width: 100%;
+}
+
+
+/* --------------------- Main (descropción) --------------------- */
+
+.Sunny__description,
+.Hitch__description,
+.Izzy__description,
+.Zipp__description,
+.Pipp__description {
+    grid-area: description;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.Sunny__description p,
+.Hitch__description p,
+.Izzy__description p,
+.Zipp__description p,
+.Pipp__description p {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+
+/* --------------------- Main (características) --------------------- */
+
+.Sunny__details,
+.Hitch__details,
+.Izzy__details,
+.Zipp__details,
+.Pipp__detail {
+    grid-area: details;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+.Sunny__details__grid,
+.Hitch__details__grid,
+.Izzy__details__grid,
+.Zipp__details__grid,
+.Pipp__details__grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(10px, auto) minmax(10px, auto) minmax(10px, auto) minmax(10px, auto) minmax(10px, auto);
+    grid-template-areas: 
+        "tipo"
+        "hogar"
+        "mark"
+        "pasat"
+        "pasion";
+    padding: 0 20px;
+}
+
+.Sunny__details--item1,
+.Hitch__details--item1,
+.Izzy__details--item1,
+.Zipp__details--item1,
+.Pipp__details--item1 {
+    grid-area: tipo;
+}
+
+.Sunny__details--item2,
+.Hitch__details--item2,
+.Izzy__details--item2,
+.Zipp__details--item2,
+.Pipp__details--item2 {
+    grid-area: hogar;
+}
+
+.Sunny__details--item3,
+.Hitch__details--item3,
+.Izzy__details--item3,
+.Zipp__details--item3,
+.Pipp__details--item3 {
+    grid-area: mark;
+}
+
+.Sunny__details--item4,
+.Hitch__details--item4,
+.Izzy__details--item4,
+.Zipp__details--item4,
+.Pipp__details--item4 {
+    grid-area: pasat;
+}
+
+.Sunny__details--item5,
+.Hitch__details--item5,
+.Izzy__details--item5,
+.Zipp__details--item5,
+.Pipp__details--item5 {
+    grid-area: pasion;
+}
+
+.Sunny__details__item,
+.Hitch__details__item,
+.Izzy__details__item,
+.Zipp__details__item,
+.Pipp__details__item {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.Sunny__details__item img,
+.Hitch__details__item img,
+.Izzy__details__item img,
+.Zipp__details__item img,
+.Pipp__details__item img {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 5px #1a1a1a);
+}
+
+.Sunny__details__item div,
+.Hitch__details__item div,
+.Izzy__details__item div,
+.Zipp__details__item div,
+.Pipp__details__item div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.Sunny__details__item div h3,
+.Hitch__details__item div h3,
+.Izzy__details__item div h3,
+.Zipp__details__item div h3,
+.Pipp__details__item div h3 {
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.Sunny__details__item div p,
+.Hitch__details__item div p,
+.Izzy__details__item div p,
+.Zipp__details__item div p,
+.Pipp__details__item div p {
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+
+
+
+/* ------------------------------------------- Media Queries ------------------------------------------------ */
+
+
+/* ----------- Media Query => min-width: 750px ------------ */
+
+@media screen and (min-width: 750px) {
+    .main-personajes__Sunny,
+    .main-personajes__Izzy,
+    .main-personajes__Pipp {
+        max-width: 1800px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: minmax(10px, auto) minmax(10px, auto) minmax(10px, auto);
+        grid-template-areas: 
+            "name image"
+            "description image"
+            "details image";
+        padding: 0 40px;
+    }
+
+    .main-personajes__Hitch,
+    .main-personajes__Zipp {
+        max-width: 1800px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: minmax(10px, auto) minmax(10px, auto) minmax(10px, auto);
+        grid-template-areas: 
+            "image name"
+            "image description"
+            "image details";
+        padding: 0 40px;
+    }
+
+    .Sunny__image,
+    .Hitch__image,
+    .Izzy__image,
+    .Zipp__image,
+    .Pipp__image {
+        margin-top: 0;
+    }
+
+    .Sunny__description,
+    .Hitch__description,
+    .Izzy__description,
+    .Zipp__description,
+    .Pipp__description {
+        margin-top: 30px;
+    }
+
+    .Sunny__details__grid,
+    .Hitch__details__grid,
+    .Izzy__details__grid,
+    .Izzy__details__grid,
+    .Pipp__details__grid {
+        padding: 0 0 0 50px;
+    }
+}
